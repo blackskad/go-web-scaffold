@@ -1,6 +1,6 @@
 # Stage to copy the code and fetch dependencies 
 # try to keep the debian version in sync with the distroless version
-FROM golang:1.24-bookworm AS base
+FROM golang:1.25-bookworm AS base
 
 ARG VERSION=development
 
