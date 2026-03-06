@@ -33,7 +33,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Running tests
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           target: coverage
           outputs: type=local,dest=coverage/
@@ -58,7 +58,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build production image
-        uses: docker/build-push-action@v6
+        uses: docker/build-push-action@v7
         with:
           target: production
           push: ${{ github.ref_type == 'tag' }}
